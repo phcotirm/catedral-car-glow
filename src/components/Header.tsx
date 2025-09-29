@@ -1,0 +1,88 @@
+import { Menu } from "lucide-react";
+import { Button } from "./ui/button";
+import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet";
+
+export const Header = () => {
+  const navItems = [
+    { label: "Serviços", href: "#servicos" },
+    { label: "Sobre", href: "#sobre" },
+    { label: "Contato", href: "#contato" },
+  ];
+
+  return (
+    <header className="fixed top-0 left-0 right-0 z-50 border-b border-border/50 bg-background/80 backdrop-blur-xl">
+      <div className="container mx-auto px-4">
+        <div className="flex items-center justify-between h-20">
+          {/* Logo */}
+          <div className="flex items-center space-x-3">
+            <div className="text-2xl md:text-3xl font-bold">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">
+                Catedral
+              </span>
+              <span className="text-foreground ml-2">Transportes</span>
+            </div>
+          </div>
+
+          {/* Desktop Navigation */}
+          <nav className="hidden md:flex items-center space-x-8">
+            {navItems.map((item) => (
+              <a
+                key={item.href}
+                href={item.href}
+                className="text-muted-foreground hover:text-primary transition-colors font-medium"
+              >
+                {item.label}
+              </a>
+            ))}
+            <Button 
+              className="bg-gradient-to-r from-primary to-accent hover:shadow-glow transition-all"
+              asChild
+            >
+              <a 
+                href="https://wa.me/5561981715793?text=Olá%2C+gostaria+de+solicitar+uma+cotação+de+transporte+de+veículo."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                WhatsApp
+              </a>
+            </Button>
+          </nav>
+
+          {/* Mobile Menu */}
+          <Sheet>
+            <SheetTrigger asChild className="md:hidden">
+              <Button variant="ghost" size="icon">
+                <Menu />
+              </Button>
+            </SheetTrigger>
+            <SheetContent>
+              <nav className="flex flex-col space-y-6 mt-8">
+                {navItems.map((item) => (
+                  <a
+                    key={item.href}
+                    href={item.href}
+                    className="text-lg font-medium hover:text-primary transition-colors"
+                  >
+                    {item.label}
+                  </a>
+                ))}
+                <Button 
+                  className="bg-gradient-to-r from-primary to-accent w-full"
+                  asChild
+                >
+                  <a 
+                    href="https://wa.me/5561981715793?text=Olá%2C+gostaria+de+solicitar+uma+cotação+de+veículo."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    WhatsApp
+                  </a>
+                </Button>
+              </nav>
+            </SheetContent>
+          </Sheet>
+        </div>
+      </div>
+    </header>
+  );
+};
