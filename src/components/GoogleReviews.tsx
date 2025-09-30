@@ -1,6 +1,22 @@
 import { Star } from "lucide-react";
+import { useEffect } from "react";
 
 export const GoogleReviews = () => {
+  useEffect(() => {
+    // Load Elfsight platform script
+    const script = document.createElement('script');
+    script.src = 'https://elfsightcdn.com/platform.js';
+    script.async = true;
+    document.body.appendChild(script);
+
+    return () => {
+      // Cleanup script on unmount
+      if (document.body.contains(script)) {
+        document.body.removeChild(script);
+      }
+    };
+  }, []);
+
   return (
     <section id="avaliacoes" className="py-24 md:py-32 bg-gradient-to-b from-secondary/30 to-background">
       <div className="container mx-auto px-4">
@@ -26,32 +42,9 @@ export const GoogleReviews = () => {
               <span className="text-2xl font-bold">Google Reviews</span>
             </div>
             
-            {/* Google Reviews Display */}
-            <div className="w-full space-y-6">
-              {/* Link to view reviews on Google */}
-              <div className="text-center">
-                <a 
-                  href="https://search.google.com/local/reviews?placeid=ChIJVeuml6UzWpMRyEpKXvxGPG0"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors font-medium"
-                >
-                  Ver Todas as Avaliações no Google
-                </a>
-              </div>
-
-              {/* Instructions for embedding widget */}
-              <div className="text-center space-y-4 pt-6 border-t border-border/50">
-                <p className="text-lg text-muted-foreground">
-                  Para exibir as avaliações diretamente aqui:
-                </p>
-                <ol className="text-left max-w-md mx-auto space-y-2 text-muted-foreground">
-                  <li>1. Acesse <a href="https://www.embedsocial.com/products/reviews-widget/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">EmbedSocial</a> ou <a href="https://elfsight.com/google-reviews-widget/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Elfsight</a></li>
-                  <li>2. Use o Place ID: <code className="bg-secondary/50 px-2 py-1 rounded text-sm">ChIJVeuml6UzWpMRyEpKXvxGPG0</code></li>
-                  <li>3. Gere o widget de avaliações</li>
-                  <li>4. Copie o código e substitua esta seção</li>
-                </ol>
-              </div>
+            {/* Elfsight Google Reviews Widget */}
+            <div className="w-full">
+              <div className="elfsight-app-862f9a5f-4a95-4cb2-bca1-ddaefadab7c7" data-elfsight-app-lazy></div>
             </div>
 
             {/* Decorative gradient */}
