@@ -26,21 +26,31 @@ export const GoogleReviews = () => {
               <span className="text-2xl font-bold">Google Reviews</span>
             </div>
             
-            {/* Google Reviews Embed */}
-            <div className="w-full min-h-[400px] flex items-center justify-center">
-              <div className="text-center space-y-4">
+            {/* Google Reviews Display */}
+            <div className="w-full space-y-6">
+              {/* Link to view reviews on Google */}
+              <div className="text-center">
+                <a 
+                  href="https://search.google.com/local/reviews?placeid=ChIJVeuml6UzWpMRyEpKXvxGPG0"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors font-medium"
+                >
+                  Ver Todas as Avaliações no Google
+                </a>
+              </div>
+
+              {/* Instructions for embedding widget */}
+              <div className="text-center space-y-4 pt-6 border-t border-border/50">
                 <p className="text-lg text-muted-foreground">
-                  Para exibir as avaliações do Google aqui, você precisa:
+                  Para exibir as avaliações diretamente aqui:
                 </p>
                 <ol className="text-left max-w-md mx-auto space-y-2 text-muted-foreground">
-                  <li>1. Acessar <a href="https://search.google.com/local/writereview?placeid=SEU_PLACE_ID" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Google Review Link Generator</a></li>
-                  <li>2. Criar seu widget de avaliações</li>
-                  <li>3. Copiar o código do iframe</li>
-                  <li>4. Substituir este placeholder pelo iframe</li>
+                  <li>1. Acesse <a href="https://www.embedsocial.com/products/reviews-widget/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">EmbedSocial</a> ou <a href="https://elfsight.com/google-reviews-widget/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Elfsight</a></li>
+                  <li>2. Use o Place ID: <code className="bg-secondary/50 px-2 py-1 rounded text-sm">ChIJVeuml6UzWpMRyEpKXvxGPG0</code></li>
+                  <li>3. Gere o widget de avaliações</li>
+                  <li>4. Copie o código e substitua esta seção</li>
                 </ol>
-                <p className="text-sm text-muted-foreground/70 pt-4">
-                  Ou use ferramentas como <a href="https://www.embedgooglereviews.com/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">EmbedGoogleReviews.com</a> para gerar gratuitamente
-                </p>
               </div>
             </div>
 
