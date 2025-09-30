@@ -4,7 +4,7 @@ export const WhatsAppButton = () => {
   return (
     <Button
       size="lg"
-      className="fixed bottom-6 right-6 z-50 rounded-full w-16 h-16 p-0 bg-gradient-to-r from-[#25D366] to-[#128C7E] hover:shadow-[0_0_30px_rgba(37,211,102,0.5)] transition-all duration-300 hover:scale-110 animate-pulse"
+      className="fixed bottom-6 right-6 z-50 rounded-full w-16 h-16 p-0 bg-gradient-to-r from-[#25D366] to-[#128C7E] hover:shadow-[0_0_30px_rgba(37,211,102,0.5)] transition-all duration-300 hover:scale-110"
       asChild
     >
       <a

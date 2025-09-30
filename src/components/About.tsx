@@ -44,27 +44,13 @@ export const About = () => {
             </div>
           </div>
 
-          {/* Image Grid */}
+          {/* Image */}
           <div className="relative animate-fade-in">
-            <div className="grid grid-cols-2 gap-4">
-              <div className="space-y-4">
-                <div className="aspect-square rounded-2xl bg-gradient-to-br from-primary/20 to-accent/20 border border-border/50 hover:border-primary/50 transition-all duration-500 hover:scale-105 overflow-hidden">
-                  <div className="w-full h-full flex items-center justify-center text-6xl">🚛</div>
-                </div>
-                <div className="aspect-[4/3] rounded-2xl bg-gradient-to-br from-accent/20 to-primary/20 border border-border/50 hover:border-primary/50 transition-all duration-500 hover:scale-105 overflow-hidden">
-                  <div className="w-full h-full flex items-center justify-center text-5xl">📦</div>
-                </div>
-              </div>
-              <div className="space-y-4 pt-8">
-                <div className="aspect-[4/3] rounded-2xl bg-gradient-to-br from-primary/20 to-accent/20 border border-border/50 hover:border-primary/50 transition-all duration-500 hover:scale-105 overflow-hidden">
-                  <div className="w-full h-full flex items-center justify-center text-5xl">🛡️</div>
-                </div>
-                <div className="aspect-square rounded-2xl bg-gradient-to-br from-accent/20 to-primary/20 border border-border/50 hover:border-primary/50 transition-all duration-500 hover:scale-105 overflow-hidden">
-                  <div className="w-full h-full flex items-center justify-center text-6xl">✅</div>
-                </div>
-              </div>
-            </div>
-
+            <img 
+              src="/src/assets/hero-transport.jpg" 
+              alt="Transporte de Veículos - Catedral Transportes" 
+              className="rounded-2xl shadow-2xl w-full h-auto object-cover border border-border/50"
+            />
             {/* Decorative Elements */}
             <div className="absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-gradient-to-r from-primary/10 to-accent/10 blur-3xl rounded-full" />
           </div>

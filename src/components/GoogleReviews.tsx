@@ -32,7 +32,7 @@ export const GoogleReviews = () => {
 
         <div className="max-w-4xl mx-auto">
           {/* Google Reviews Widget */}
-          <div className="relative overflow-hidden rounded-2xl border border-border/50 bg-card/50 backdrop-blur-sm p-4 md:p-8 shadow-card animate-fade-in">
+          <div className="relative overflow-hidden rounded-2xl border border-border/50 bg-white p-4 md:p-8 shadow-card animate-fade-in">
             <div className="flex items-center justify-center gap-2 mb-6">
               <div className="flex gap-1">
                 {[...Array(5)].map((_, i) => (

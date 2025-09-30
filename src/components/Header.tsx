@@ -15,6 +15,9 @@ export const Header = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <div className="flex items-center space-x-3">
+            <svg className="w-8 h-8 md:w-10 md:h-10 text-primary" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M3 17H21V19H3V17ZM3 10H21V16H3V10ZM6 6L12 2L18 6V8H6V6Z" fill="currentColor"/>
+            </svg>
             <div className="text-2xl md:text-3xl font-bold">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">
                 Catedral
