@@ -69,7 +69,7 @@ export const Contact = () => {
               <div className="space-y-2 text-muted-foreground">
                 <p>Segunda a Sexta: 8h às 18h</p>
                 <p>Sábado: 8h às 14h</p>
-                <p className="text-primary font-semibold pt-2">WhatsApp 24/7</p>
+                <p className="text-primary font-semibold pt-2">Atendimento rápido via WhatsApp</p>
               </div>
             </Card>
           </div>

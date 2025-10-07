@@ -1,4 +1,4 @@
-import logoVertical from "@/assets/logo-vertical.webp";
+import logoVertical from "@/assets/logo-vertical.png";
 
 export const Footer = () => {
   return (

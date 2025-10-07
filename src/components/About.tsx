@@ -8,7 +8,7 @@ export const About = () => {
     "Seguro completo incluso em todos os transportes",
     "Rede de parceiros confiáveis em todo Brasil",
     "Rastreamento em tempo real",
-    "Atendimento personalizado 24/7",
+    "Atendimento rápido e personalizado",
   ];
 
   return (
