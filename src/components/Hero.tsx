@@ -49,8 +49,8 @@ export const Hero = () => {
               <div className="text-sm md:text-base text-muted-foreground">Seguro Incluso</div>
             </div>
             <div className="space-y-2">
-              <div className="text-4xl md:text-5xl font-bold text-primary">+5mil</div>
-              <div className="text-sm md:text-base text-muted-foreground">Veículos Transportados</div>
+              <div className="text-4xl md:text-5xl font-bold text-primary">+10</div>
+              <div className="text-sm md:text-base text-muted-foreground">          Parceiros em todo Brasil</div>
             </div>
           </div>
         </div>
