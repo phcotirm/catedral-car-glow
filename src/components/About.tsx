@@ -1,4 +1,5 @@
 import { CheckCircle2 } from "lucide-react";
+import aboutImage from "@/assets/about-transport.webp";
 
 export const About = () => {
   const features = [
@@ -47,7 +48,7 @@ export const About = () => {
           {/* Image */}
           <div className="relative animate-fade-in">
             <img 
-              src="/src/assets/hero-transport.jpg" 
+              src={aboutImage} 
               alt="Transporte de Veículos - Catedral Transportes" 
               className="rounded-2xl shadow-2xl w-full h-auto object-cover border border-border/50"
             />

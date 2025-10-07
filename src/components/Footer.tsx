@@ -1,13 +1,16 @@
+import logoVertical from "@/assets/logo-vertical.webp";
+
 export const Footer = () => {
   return (
     <footer className="bg-secondary/20 border-t border-border/50 py-12">
       <div className="container mx-auto px-4">
-        <div className="text-center space-y-4">
-          <div className="text-2xl font-bold">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">
-              Catedral
-            </span>
-            <span className="text-foreground ml-2">Transportes</span>
+        <div className="text-center space-y-6">
+          <div className="flex justify-center">
+            <img 
+              src={logoVertical} 
+              alt="Catedral Transportes" 
+              className="h-24 w-auto"
+            />
           </div>
           
           <p className="text-muted-foreground max-w-2xl mx-auto">

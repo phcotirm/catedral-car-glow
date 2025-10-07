@@ -1,6 +1,7 @@
 import { Menu } from "lucide-react";
 import { Button } from "./ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet";
+import logoHorizontal from "@/assets/logo-horizontal.webp";
 
 export const Header = () => {
   const navItems = [
@@ -14,16 +15,12 @@ export const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <div className="flex items-center space-x-3">
-            <svg className="w-8 h-8 md:w-10 md:h-10 text-primary" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M3 17H21V19H3V17ZM3 10H21V16H3V10ZM6 6L12 2L18 6V8H6V6Z" fill="currentColor"/>
-            </svg>
-            <div className="text-2xl md:text-3xl font-bold">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">
-                Catedral
-              </span>
-              <span className="text-foreground ml-2">Transportes</span>
-            </div>
+          <div className="flex items-center">
+            <img 
+              src={logoHorizontal} 
+              alt="Catedral Transportes" 
+              className="h-12 md:h-14 w-auto"
+            />
           </div>
 
           {/* Desktop Navigation */}
