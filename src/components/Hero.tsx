@@ -1,17 +1,11 @@
 import { ArrowRight } from "lucide-react";
 import { Button } from "./ui/button";
 import heroImage from "@/assets/hero-transport.jpg";
-
 export const Hero = () => {
-  return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+  return <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
-        <img 
-          src={heroImage}
-          alt="Transporte de veículos profissional" 
-          className="w-full h-full object-cover"
-        />
+        <img src={heroImage} alt="Transporte de veículos profissional" className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-br from-background/95 via-background/85 to-background/70" />
       </div>
 
@@ -30,27 +24,14 @@ export const Hero = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
-            <Button 
-              size="lg"
-              className="group bg-gradient-to-r from-primary to-accent hover:shadow-glow transition-all duration-300 text-lg px-8 py-6 rounded-full"
-              asChild
-            >
-              <a 
-                href="https://wa.me/5561981715793?text=Olá%2C+gostaria+de+solicitar+uma+cotação+de+transporte+de+veículo."
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+            <Button size="lg" className="group bg-gradient-to-r from-primary to-accent hover:shadow-glow transition-all duration-300 text-lg px-8 py-6 rounded-full" asChild>
+              <a href="https://wa.me/5561981715793?text=Olá%2C+gostaria+de+solicitar+uma+cotação+de+transporte+de+veículo." target="_blank" rel="noopener noreferrer">
                 Solicitar Cotação
                 <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
               </a>
             </Button>
             
-            <Button 
-              size="lg"
-              variant="outline"
-              className="text-lg px-8 py-6 rounded-full border-2 hover:bg-secondary/50"
-              asChild
-            >
+            <Button size="lg" variant="outline" className="text-lg px-8 py-6 rounded-full border-2 hover:bg-secondary/50" asChild>
               <a href="#servicos">
                 Nossos Serviços
               </a>
@@ -68,8 +49,8 @@ export const Hero = () => {
               <div className="text-sm text-muted-foreground">Seguro Incluso</div>
             </div>
             <div className="col-span-2 md:col-span-1 space-y-2">
-              <div className="text-4xl md:text-5xl font-bold text-primary">24/7</div>
-              <div className="text-sm text-muted-foreground">Atendimento</div>
+              
+              
             </div>
           </div>
         </div>
@@ -77,10 +58,7 @@ export const Hero = () => {
 
       {/* Scroll Indicator */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 animate-bounce">
-        <div className="w-6 h-10 border-2 border-muted-foreground rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-primary rounded-full mt-2 animate-pulse" />
-        </div>
+        
       </div>
-    </section>
-  );
+    </section>;
 };
