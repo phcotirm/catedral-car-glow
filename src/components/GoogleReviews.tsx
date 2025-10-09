@@ -3,10 +3,10 @@ import { useEffect } from "react";
 
 export const GoogleReviews = () => {
   useEffect(() => {
-    // Load Elfsight platform script
+    // Load Elfsight platform script with defer for better performance
     const script = document.createElement('script');
     script.src = 'https://elfsightcdn.com/platform.js';
-    script.async = true;
+    script.defer = true;
     document.body.appendChild(script);
 
     return () => {

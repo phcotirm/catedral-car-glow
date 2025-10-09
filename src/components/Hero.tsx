@@ -1,11 +1,16 @@
 import { ArrowRight } from "lucide-react";
 import { Button } from "./ui/button";
-import heroImage from "@/assets/hero-transport.jpg";
+import heroImage from "@/assets/hero-transport.webp";
 export const Hero = () => {
   return <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
-        <img src={heroImage} alt="Transporte de veículos profissional" className="w-full h-full object-cover" />
+        <img 
+          src={heroImage} 
+          alt="Transporte de veículos profissional" 
+          className="w-full h-full object-cover"
+          fetchPriority="high"
+        />
         <div className="absolute inset-0 bg-gradient-to-br from-background/95 via-background/85 to-background/70" />
       </div>
 

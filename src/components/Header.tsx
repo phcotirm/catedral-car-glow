@@ -1,7 +1,7 @@
 import { Menu } from "lucide-react";
 import { Button } from "./ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet";
-import logoHorizontal from "@/assets/logo-horizontal.png";
+import logoHorizontal from "@/assets/logo-horizontal.webp";
 
 export const Header = () => {
   const navItems = [

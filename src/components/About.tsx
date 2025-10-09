@@ -50,6 +50,7 @@ export const About = () => {
             <img 
               src={aboutImage} 
               alt="Transporte de Veículos - Catedral Transportes" 
+              loading="lazy"
               className="rounded-2xl shadow-2xl w-full h-auto object-cover border border-border/50"
             />
             {/* Decorative Elements */}
