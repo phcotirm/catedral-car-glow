@@ -1,6 +1,6 @@
 import { ArrowRight } from "lucide-react";
 import { Button } from "./ui/button";
-import heroImage from "@/assets/hero-transport.webp";
+import heroImage from "@/assets/hero-transport-optimized.webp";
 export const Hero = () => {
   return <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image with Overlay */}
