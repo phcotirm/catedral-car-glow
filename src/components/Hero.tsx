@@ -55,7 +55,7 @@ export const Hero = () => {
             </div>
             <div className="space-y-2">
               <div className="text-4xl md:text-5xl font-bold text-primary">+10</div>
-              <div className="text-sm md:text-base text-muted-foreground">          Parceiros em todo Brasil</div>
+              <div className="text-sm md:text-base text-muted-foreground">Parceiros em todo Brasil</div>
             </div>
           </div>
         </div>
