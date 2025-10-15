@@ -1,11 +1,13 @@
 import { Menu } from "lucide-react";
 import { Button } from "./ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet";
+import { Link } from "react-router-dom";
 import logoHorizontal from "@/assets/logo-header.png";
 
 export const Header = () => {
   const navItems = [
     { label: "Serviços", href: "#servicos" },
+    { label: "Blog", href: "/blog" },
     { label: "Sobre", href: "#sobre" },
     { label: "Contato", href: "#contato" },
   ];
@@ -26,13 +28,23 @@ export const Header = () => {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
-              <a
-                key={item.href}
-                href={item.href}
-                className="text-muted-foreground hover:text-primary transition-colors font-medium"
-              >
-                {item.label}
-              </a>
+              item.href.startsWith('#') ? (
+                <a
+                  key={item.href}
+                  href={item.href}
+                  className="text-muted-foreground hover:text-primary transition-colors font-medium"
+                >
+                  {item.label}
+                </a>
+              ) : (
+                <Link
+                  key={item.href}
+                  to={item.href}
+                  className="text-muted-foreground hover:text-primary transition-colors font-medium"
+                >
+                  {item.label}
+                </Link>
+              )
             ))}
             <Button 
               className="bg-gradient-to-r from-primary to-accent hover:shadow-glow transition-all"
@@ -58,13 +70,23 @@ export const Header = () => {
             <SheetContent>
               <nav className="flex flex-col space-y-6 mt-8">
                 {navItems.map((item) => (
-                  <a
-                    key={item.href}
-                    href={item.href}
-                    className="text-lg font-medium hover:text-primary transition-colors"
-                  >
-                    {item.label}
-                  </a>
+                  item.href.startsWith('#') ? (
+                    <a
+                      key={item.href}
+                      href={item.href}
+                      className="text-lg font-medium hover:text-primary transition-colors"
+                    >
+                      {item.label}
+                    </a>
+                  ) : (
+                    <Link
+                      key={item.href}
+                      to={item.href}
+                      className="text-lg font-medium hover:text-primary transition-colors"
+                    >
+                      {item.label}
+                    </Link>
+                  )
                 ))}
                 <Button 
                   className="bg-gradient-to-r from-primary to-accent w-full"

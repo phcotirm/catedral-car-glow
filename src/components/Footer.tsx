@@ -1,4 +1,5 @@
 import logoVertical from "@/assets/logo-vertical.png";
+import { Link } from "react-router-dom";
 
 export const Footer = () => {
   return (
@@ -17,6 +18,24 @@ export const Footer = () => {
             Transporte de veículos com segurança, experiência e confiança. 
             Registro ANTT e seguro completo incluso.
           </p>
+
+          <div className="flex flex-wrap justify-center gap-6 text-sm">
+            <Link to="/" className="hover:text-primary transition-colors">
+              Home
+            </Link>
+            <Link to="/blog" className="hover:text-primary transition-colors">
+              Blog
+            </Link>
+            <a href="#servicos" className="hover:text-primary transition-colors">
+              Serviços
+            </a>
+            <a href="#sobre" className="hover:text-primary transition-colors">
+              Sobre
+            </a>
+            <a href="#contato" className="hover:text-primary transition-colors">
+              Contato
+            </a>
+          </div>
 
           <div className="pt-6 border-t border-border/30">
             <p className="text-sm text-muted-foreground">
