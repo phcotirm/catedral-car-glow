@@ -39,6 +39,10 @@ export const GoogleReviews = () => {
   const [averageRating] = useState(5.0);
   const [totalReviews] = useState(28);
 
+  // Place ID da empresa obtido do Google Maps
+  const PLACE_ID = "ChIJa3vP-sC1wZMR5jR2XpXg_yU";
+  const GOOGLE_MAPS_URL = `https://www.google.com/maps/place/?q=place_id:${PLACE_ID}`;
+
   useEffect(() => {
     // Load Elfsight platform script with defer for better performance
     const script = document.createElement('script');
@@ -193,7 +197,7 @@ export const GoogleReviews = () => {
           <Button
             size="lg"
             className="gap-2 bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 shadow-lg hover:shadow-xl transition-all"
-            onClick={() => window.open('https://www.google.com/maps', '_blank')}
+            onClick={() => window.open(GOOGLE_MAPS_URL, '_blank')}
           >
             <MapPin className="w-5 h-5" />
             Ver Mais Avaliações no Google Maps
