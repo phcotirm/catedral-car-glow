@@ -11,6 +11,7 @@ import { ptBR } from "date-fns/locale";
 import { Helmet } from "react-helmet";
 import NotFound from "./NotFound";
 import DOMPurify from "dompurify";
+import defaultCover from "@/assets/blog/transporte-veiculo-hero.jpg";
 
 const BlogPost = () => {
   const { slug } = useParams();
@@ -103,7 +104,7 @@ const BlogPost = () => {
         </script>
       </Helmet>
 
-      <div className="min-h-screen bg-white">
+      <div className="min-h-screen bg-white text-slate-900">
         <Header />
         
         <article className="container mx-auto px-4 py-16 max-w-3xl">
@@ -132,12 +133,12 @@ const BlogPost = () => {
           {post.cover_image && (
             <div className="mb-10 rounded-xl overflow-hidden shadow-lg">
               <img
-                src={post.cover_image}
+                src={post.cover_image || defaultCover}
                 alt={post.title}
                 className="w-full h-96 object-cover"
+                loading="lazy"
                 onError={(e) => {
-                  (e.target as HTMLImageElement).style.display = 'none';
-                  console.error('Failed to load image:', post.cover_image);
+                  (e.currentTarget as HTMLImageElement).src = defaultCover;
                 }}
               />
             </div>
