@@ -75,16 +75,16 @@ const BlogPost = () => {
   return (
     <>
       <Helmet>
-        <title>{post.meta_title || post.title} | Catedral Transportes</title>
-        <meta name="description" content={post.meta_description || post.excerpt} />
-        <meta property="og:title" content={post.title} />
-        <meta property="og:description" content={post.excerpt} />
+        <title>{post.meta_title || post.title} | Blog Catedral Transportes</title>
+        <meta name="description" content={post.meta_description || post.excerpt || `Leia o artigo completo sobre ${post.title} no blog da Catedral Transportes. Informações e dicas sobre transporte de veículos.`} />
+        <meta property="og:title" content={post.meta_title || post.title} />
+        <meta property="og:description" content={post.meta_description || post.excerpt || `Leia o artigo completo sobre ${post.title} no blog da Catedral Transportes. Informações e dicas sobre transporte de veículos.`} />
         <meta property="og:type" content="article" />
         {post.cover_image && <meta property="og:image" content={post.cover_image} />}
         <meta property="og:url" content={`https://catedraltransportes.com.br/blog/${post.slug}`} />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={post.title} />
-        <meta name="twitter:description" content={post.excerpt} />
+        <meta name="twitter:title" content={post.meta_title || post.title} />
+        <meta name="twitter:description" content={post.meta_description || post.excerpt || `Leia o artigo completo sobre ${post.title} no blog da Catedral Transportes. Informações e dicas sobre transporte de veículos.`} />
         {post.cover_image && <meta name="twitter:image" content={post.cover_image} />}
         <link rel="canonical" href={`https://catedraltransportes.com.br/blog/${post.slug}`} />
         <script type="application/ld+json">

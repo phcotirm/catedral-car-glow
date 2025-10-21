@@ -58,13 +58,13 @@ const Blog = () => {
   return (
     <>
       <Helmet>
-        <title>Blog - Catedral Transportes | Dicas e Informações sobre Transporte de Veículos</title>
+        <title>Blog Catedral Transportes | Dicas, Guias e Notícias sobre Transporte de Veículos</title>
         <meta 
           name="description" 
-          content="Fique por dentro de tudo sobre transporte de veículos. Dicas, documentação, segurança e muito mais no blog da Catedral Transportes."
+          content="Explore o blog da Catedral Transportes para dicas, guias completos e as últimas notícias sobre transporte de veículos, logística e segurança. Mantenha-se informado!"
         />
-        <meta property="og:title" content="Blog - Catedral Transportes" />
-        <meta property="og:description" content="Dicas e informações sobre transporte de veículos" />
+        <meta property="og:title" content="Blog Catedral Transportes | Dicas e Guias" />
+        <meta property="og:description" content="Dicas, guias e notícias sobre transporte de veículos com a Catedral Transportes" />
         <meta property="og:type" content="website" />
         <link rel="canonical" href="https://catedraltransportes.com.br/blog" />
       </Helmet>
