@@ -5,7 +5,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, Calendar, Eye } from "lucide-react";
+import { ArrowLeft, Calendar } from "lucide-react";
 import { format } from "date-fns";
 import { ptBR } from "date-fns/locale";
 import { Helmet } from "react-helmet";
@@ -132,7 +132,7 @@ const BlogPost = () => {
           {post.cover_image && (
             <div className="mb-10 rounded-xl overflow-hidden shadow-lg">
               <img
-                src={"https://files.manuscdn.com/user_upload_by_module/session_file/310419663028341780/pkGCEngzWWcuIzAu.png"}
+                src={post.cover_image}
                 alt={post.title}
                 className="w-full h-96 object-cover"
                 onError={(e) => {
@@ -161,36 +161,32 @@ const BlogPost = () => {
                 {format(new Date(post.published_at), "dd 'de' MMMM 'de' yyyy", { locale: ptBR })}
               </time>
             </div>
-            <div className="flex items-center gap-2">
-              <Eye className="h-4 w-4" />
-              <span>{post.views_count || 0} visualizações</span>
-            </div>
           </div>
 
           {/* Content - Optimized for Reading */}
           <div 
             className="prose prose-lg max-w-none
-              prose-headings:text-slate-900 prose-headings:font-bold prose-headings:mt-8 prose-headings:mb-4
-              prose-h1:text-4xl prose-h1:mt-10 prose-h1:mb-6
-              prose-h2:text-3xl prose-h2:mt-8 prose-h2:mb-4 prose-h2:border-b prose-h2:pb-3 prose-h2:border-slate-200
-              prose-h3:text-2xl prose-h3:mt-6 prose-h3:mb-3
-              prose-h4:text-xl prose-h4:mt-5 prose-h4:mb-2
-              prose-p:text-gray-800 prose-p:leading-relaxed prose-p:mb-5 prose-p:text-lg
+              prose-headings:text-slate-900 prose-headings:font-bold prose-headings:mt-12 prose-headings:mb-6
+              prose-h1:text-4xl prose-h1:mt-14 prose-h1:mb-8
+              prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-6 prose-h2:border-b prose-h2:pb-4 prose-h2:border-slate-200
+              prose-h3:text-2xl prose-h3:mt-10 prose-h3:mb-5
+              prose-h4:text-xl prose-h4:mt-8 prose-h4:mb-4
+              prose-p:text-slate-800 prose-p:leading-loose prose-p:mb-6 prose-p:text-lg
               prose-a:text-primary prose-a:font-semibold prose-a:no-underline hover:prose-a:underline
               prose-strong:text-slate-900 prose-strong:font-bold
-              prose-em:text-slate-700 prose-em:italic
-              prose-blockquote:border-l-4 prose-blockquote:border-primary prose-blockquote:pl-6 prose-blockquote:py-2 prose-blockquote:bg-primary/5 prose-blockquote:rounded-r-lg prose-blockquote:my-6
-              prose-blockquote:text-gray-800 prose-blockquote:italic
-              prose-ul:text-gray-800 prose-ul:space-y-3 prose-ul:mb-6
-              prose-ol:text-gray-800 prose-ol:space-y-3 prose-ol:mb-6
-              prose-li:text-lg prose-li:leading-relaxed
+              prose-em:text-slate-800 prose-em:italic
+              prose-blockquote:border-l-4 prose-blockquote:border-primary prose-blockquote:pl-6 prose-blockquote:py-4 prose-blockquote:bg-primary/5 prose-blockquote:rounded-r-lg prose-blockquote:my-8
+              prose-blockquote:text-slate-800 prose-blockquote:italic
+              prose-ul:text-slate-800 prose-ul:space-y-4 prose-ul:mb-8 prose-ul:mt-6
+              prose-ol:text-slate-800 prose-ol:space-y-4 prose-ol:mb-8 prose-ol:mt-6
+              prose-li:text-lg prose-li:leading-loose prose-li:mb-3
               prose-code:bg-slate-100 prose-code:text-primary prose-code:px-2 prose-code:py-1 prose-code:rounded prose-code:text-sm prose-code:font-mono
-              prose-pre:bg-slate-900 prose-pre:text-slate-100 prose-pre:p-4 prose-pre:rounded-lg prose-pre:overflow-x-auto prose-pre:my-6
-              prose-img:rounded-lg prose-img:shadow-md prose-img:my-8
-              prose-table:border-collapse prose-table:w-full prose-table:my-6
-              prose-th:bg-slate-100 prose-th:text-slate-900 prose-th:font-bold prose-th:p-3 prose-th:text-left
-              prose-td:border prose-td:border-slate-200 prose-td:p-3 prose-td:text-gray-800
-              prose-hr:border-slate-200 prose-hr:my-8"
+              prose-pre:bg-slate-900 prose-pre:text-slate-100 prose-pre:p-4 prose-pre:rounded-lg prose-pre:overflow-x-auto prose-pre:my-8
+              prose-img:rounded-lg prose-img:shadow-md prose-img:my-10
+              prose-table:border-collapse prose-table:w-full prose-table:my-8
+              prose-th:bg-slate-100 prose-th:text-slate-900 prose-th:font-bold prose-th:p-4 prose-th:text-left
+              prose-td:border prose-td:border-slate-200 prose-td:p-4 prose-td:text-slate-800
+              prose-hr:border-slate-200 prose-hr:my-10"
             dangerouslySetInnerHTML={{ __html: sanitizedContent }}
           />
 
