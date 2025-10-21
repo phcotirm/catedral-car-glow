@@ -9,6 +9,9 @@ import { ArrowLeft, Calendar, Eye } from "lucide-react";
 import { format } from "date-fns";
 import { ptBR } from "date-fns/locale";
 import { Helmet } from "react-helmet";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
+import rehypeRaw from "rehype-raw";
 import NotFound from "./NotFound";
 
 const BlogPost = () => {
@@ -125,6 +128,10 @@ const BlogPost = () => {
               src={post.cover_image}
               alt={post.title}
               className="w-full h-64 md:h-96 object-cover rounded-lg mb-8"
+              onError={(e) => {
+                (e.target as HTMLImageElement).style.display = 'none'; // Hide broken image
+                console.error('Failed to load image:', post.cover_image);
+              }}
             />
           )}
 
@@ -151,10 +158,11 @@ const BlogPost = () => {
           </div>
 
           {/* Content */}
-          <div 
-            className="prose prose-lg max-w-none"
-            dangerouslySetInnerHTML={{ __html: post.content }}
-          />
+          <div className="prose prose-lg max-w-none">
+            <ReactMarkdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeRaw]}>
+              {post.content}
+            </ReactMarkdown>
+          </div>
 
           {/* Call to Action */}
           <div className="mt-12 p-8 bg-primary/5 rounded-lg text-center">
