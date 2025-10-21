@@ -103,7 +103,7 @@ const BlogPost = () => {
         </script>
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
+      <div className="min-h-screen bg-white">
         <Header />
         
         <article className="container mx-auto px-4 py-16 max-w-3xl">
@@ -132,7 +132,7 @@ const BlogPost = () => {
           {post.cover_image && (
             <div className="mb-10 rounded-xl overflow-hidden shadow-lg">
               <img
-                src={post.cover_image}
+                src={"https://files.manuscdn.com/user_upload_by_module/session_file/310419663028341780/pkGCEngzWWcuIzAu.png"}
                 alt={post.title}
                 className="w-full h-96 object-cover"
                 onError={(e) => {
@@ -175,21 +175,21 @@ const BlogPost = () => {
               prose-h2:text-3xl prose-h2:mt-8 prose-h2:mb-4 prose-h2:border-b prose-h2:pb-3 prose-h2:border-slate-200
               prose-h3:text-2xl prose-h3:mt-6 prose-h3:mb-3
               prose-h4:text-xl prose-h4:mt-5 prose-h4:mb-2
-              prose-p:text-slate-700 prose-p:leading-relaxed prose-p:mb-5 prose-p:text-lg
+              prose-p:text-gray-800 prose-p:leading-relaxed prose-p:mb-5 prose-p:text-lg
               prose-a:text-primary prose-a:font-semibold prose-a:no-underline hover:prose-a:underline
               prose-strong:text-slate-900 prose-strong:font-bold
               prose-em:text-slate-700 prose-em:italic
               prose-blockquote:border-l-4 prose-blockquote:border-primary prose-blockquote:pl-6 prose-blockquote:py-2 prose-blockquote:bg-primary/5 prose-blockquote:rounded-r-lg prose-blockquote:my-6
-              prose-blockquote:text-slate-700 prose-blockquote:italic
-              prose-ul:text-slate-700 prose-ul:space-y-3 prose-ul:mb-6
-              prose-ol:text-slate-700 prose-ol:space-y-3 prose-ol:mb-6
+              prose-blockquote:text-gray-800 prose-blockquote:italic
+              prose-ul:text-gray-800 prose-ul:space-y-3 prose-ul:mb-6
+              prose-ol:text-gray-800 prose-ol:space-y-3 prose-ol:mb-6
               prose-li:text-lg prose-li:leading-relaxed
               prose-code:bg-slate-100 prose-code:text-primary prose-code:px-2 prose-code:py-1 prose-code:rounded prose-code:text-sm prose-code:font-mono
               prose-pre:bg-slate-900 prose-pre:text-slate-100 prose-pre:p-4 prose-pre:rounded-lg prose-pre:overflow-x-auto prose-pre:my-6
               prose-img:rounded-lg prose-img:shadow-md prose-img:my-8
               prose-table:border-collapse prose-table:w-full prose-table:my-6
               prose-th:bg-slate-100 prose-th:text-slate-900 prose-th:font-bold prose-th:p-3 prose-th:text-left
-              prose-td:border prose-td:border-slate-200 prose-td:p-3 prose-td:text-slate-700
+              prose-td:border prose-td:border-slate-200 prose-td:p-3 prose-td:text-gray-800
               prose-hr:border-slate-200 prose-hr:my-8"
             dangerouslySetInnerHTML={{ __html: sanitizedContent }}
           />
